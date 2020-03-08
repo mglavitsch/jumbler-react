@@ -1,0 +1,19 @@
+{
+  "name": "jumbler-app-ts",
+  "version": "0.0.1",
+  "description": "React App Jumbler (TypeScript)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development",
+    "dev-server": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "Michael Glavitsch",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mglavitsch/jumbler-react.git"
+  }
+}
