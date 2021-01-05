@@ -4,8 +4,10 @@ const distDir = path.join(__dirname, "dist");
 const srcDir = path.join(__dirname, "src");
 
 module.exports = {
-  entry: srcDir + "/index.js",
-  mode: "production",
+  entry: {
+    app: srcDir + "/index.js"
+  },
+  mode: "development",
   output: {
     path: distDir,
     filename: "bundle.js"
@@ -28,5 +30,9 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
     ]
+  },
+  devServer: {
+    publicPath: "/",
+    contentBase: "./"
   }
 };
