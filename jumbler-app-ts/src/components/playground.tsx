@@ -17,12 +17,6 @@ interface IPgProps {
 }
 
 export default class Playground extends Component<IPgProps, {}> {
-  style = {
-    backgroundColor: "#ebebe0",
-    borderRadius: 10,
-    paddingTop: 20
-  };
-
   render() {
     // Destructuring Arguments
     const {
@@ -37,7 +31,7 @@ export default class Playground extends Component<IPgProps, {}> {
 
     return (
       <Form>
-        <Container fluid={true} style={this.style}>
+        <Container>
           <Row>
             <Col>
               <Form.Group controlId="resetButton">
@@ -61,7 +55,7 @@ export default class Playground extends Component<IPgProps, {}> {
             </Col>
           </Row>
           <Row>
-            <Col md={{ span: 3, offset: 9 }}>
+            <Col>
               <Form.Group controlId="jumbleButton">
                 <Button variant="primary" onClick={onJumble}>
                   Jumble <Badge variant="light">{counter}</Badge>

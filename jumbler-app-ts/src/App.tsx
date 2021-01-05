@@ -1,6 +1,5 @@
 import React, { Component, Suspense, lazy } from "react";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -71,8 +70,8 @@ class App extends Component<{}, IAppState> {
           newTextInput.length === 0
             ? 0
             : newTextInput !== this.state.textInput
-            ? 1
-            : this.state.counter + 1
+              ? 1
+              : this.state.counter + 1
       });
     });
   };
@@ -129,8 +128,7 @@ class App extends Component<{}, IAppState> {
                 <div className="row">
                   <div className="col-sm-8">
                     <p className="text-white">
-                      This page is powered by ReactJS, TypeScript and
-                      React-Bootstrap.
+                      This page is powered by ReactJS, TypeScript and React-Bootstrap.
                     </p>
                   </div>
                   <div className="col-sm-4">
@@ -153,24 +151,22 @@ class App extends Component<{}, IAppState> {
           </Navbar>
         </header>
         <main>
-          <Jumbotron fluid style={this.jumbotronStyle}>
-            <Container>
-              <h1>Jumbler</h1>
-              <p>
-                It doesn't matter in what order the letters in a word are, the
-                only important thing is that the first and last letter be at the
-                right place. The rest can be a total mess and you can still read
-                it without problem. This is because the human mind does not read
-                every letter by itself, but the word as a whole.
+          <Jumbotron style={this.jumbotronStyle}>
+            <h1>Jumbler</h1>
+            <p>
+              It doesn't matter in what order the letters in a word are, the
+              only important thing is that the first and last letter be at the
+              right place. The rest can be a total mess and you can still read
+              it without problem. This is because the human mind does not read
+              every letter by itself, but the word as a whole.
               </p>
-              <Button
-                variant="info"
-                type="button"
-                onClick={this.handleShowPlayground}
-              >
-                {buttonText}
-              </Button>
-            </Container>
+            <Button
+              variant="info"
+              type="button"
+              onClick={this.handleShowPlayground}
+            >
+              {buttonText}
+            </Button>
           </Jumbotron>
           {this.renderPlayground()}
         </main>
