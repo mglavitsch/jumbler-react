@@ -12,8 +12,9 @@ code {
     monospace;
 }
 
-.container-fluid {
-  max-width: 600px;
+.container {
+  display: flex;
+  flex-direction: column;
 }
 
 .jumbotron {

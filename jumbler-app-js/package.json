@@ -10,8 +10,27 @@
   "keywords": [],
   "author": "Michael Glavitsch",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "fsevents": "^2.2.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.1"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mglavitsch/jumbler-react.git"

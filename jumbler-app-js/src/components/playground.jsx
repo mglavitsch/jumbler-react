@@ -7,12 +7,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
 export default class Playground extends Component {
-  style = {
-    backgroundColor: "#e9ecf0",
-    borderRadius: 10,
-    paddingTop: 20
-  };
-
   render() {
     // Destructuring Arguments
     const {
@@ -27,7 +21,7 @@ export default class Playground extends Component {
 
     return (
       <Form>
-        <Container fluid="true" style={this.style}>
+        <Container>
           <Row>
             <Col>
               <Form.Group controlId="resetButton">
@@ -51,7 +45,7 @@ export default class Playground extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md={{ span: 3, offset: 9 }}>
+            <Col>
               <Form.Group controlId="jumbleButton">
                 <Button variant="primary" onClick={onJumble}>
                   Jumble <Badge variant="light">{counter}</Badge>
