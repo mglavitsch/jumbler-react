@@ -17,41 +17,30 @@ Run the following commands for installation:
 
 ```
 $ cd jumbler-react/jumbler-app-ts
-$ npm install --save react@16.12.0 react-dom@16.12.0
-$ npm install --save popper.js@1.16.0
-$ npm install --save jquery@3.4.1
-$ npm install --save bootstrap@4.3.1
-$ npm install --save react-bootstrap@1.0.0-beta.16
-$ npm install --save-dev webpack@4.41.6 webpack-cli@3.3.11 webpack-dev-server@3.9.0
-$ npm install --save-dev @types/react@16.9.19 @types/react-dom@16.9.5
-$ npm install --save-dev typescript@3.7.5
-$ npm install --save-dev @babel/core@7.8.4 @babel/cli@7.8.4 @babel/plugin-proposal-class-properties@7.8.3 @babel/preset-env@7.8.4 @babel/preset-typescript@7.8.3 @babel/preset-react@7.8.3
-$ npm install --save-dev babel-loader@8.0.6
-$ npm install --save-dev style-loader@1.1.3 css-loader@3.4.2
+$ npm install
 $ npm list --depth=0
 jumbler-app-ts@0.0.1 myPath/jumbler-app-ts
-├── @babel/cli@7.8.4
-├── @babel/core@7.8.4
-├── @babel/plugin-proposal-class-properties@7.8.3
-├── @babel/preset-env@7.8.4
-├── @babel/preset-react@7.8.3
-├── @babel/preset-typescript@7.8.3
-├── @types/react@16.9.19
-├── @types/react-dom@16.9.5
-├── babel-loader@8.0.6
-├── bootstrap@4.3.1
-├── css-loader@3.4.2
-├── jquery@3.4.1
-├── popper.js@1.16.0
-├── react@16.12.0
-├── react-bootstrap@1.0.0-beta.16
-├── react-dom@16.12.0
-├── style-loader@1.1.3
-├── typescript@3.7.5
-├── webpack@4.41.6
-├── webpack-cli@3.3.11
-└── webpack-dev-server@3.9.0
-
+├── @babel/cli@7.12.10
+├── @babel/core@7.12.10
+├── @babel/plugin-proposal-class-properties@7.12.1
+├── @babel/preset-env@7.12.11
+├── @babel/preset-react@7.12.10
+├── @babel/preset-typescript@7.12.7
+├── @types/react@16.14.2
+├── @types/react-dom@16.9.10
+├── babel-loader@8.2.2
+├── bootstrap@4.5.3
+├── css-loader@5.0.1
+├── fsevents@2.3.0
+├── jquery@3.5.1
+├── popper.js@1.16.1
+├── react@16.14.0
+├── react-bootstrap@1.4.0
+├── react-dom@16.14.0
+├── style-loader@2.0.0
+├── webpack@4.44.2
+├── webpack-cli@3.3.12
+└── webpack-dev-server@3.11.1
 ```
 
 Build the bundle using [webpack](https://webpack.js.org):
@@ -60,7 +49,7 @@ Build the bundle using [webpack](https://webpack.js.org):
 $ npm start
 ```
 
-Start the webpack development server:
+Start the webpack development server. Watch mode is configured via `webpack.config.json`:
 
 ```
 $ npm run dev-server
