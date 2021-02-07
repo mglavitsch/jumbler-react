@@ -1,6 +1,6 @@
 # jumbler-react
 
-Examples of small demo React apps. There are two implementations of the React App Jumbler, see referenced README files.
+Sample demo React app run on Docker and Kubernetes.
 
 # Installation
 
@@ -13,12 +13,19 @@ $ cd myPath
 $ git clone https://github.com/mglavitsch/jumbler-react.git
 ```
 
-Follow the READMEs of the React app of your interest.
+# Three versions of React App Jumbler
+
+There are three directories containing two different implementations of [React](https://reactjs.org) app Jumbler run in different runtime environments.
 
 ## jumbler-app-js
 
-This implementation of React App Jumbler is a [React](https://reactjs.org) demo JavaScript application, see [./jumbler-app-js/README.md](./jumbler-app-js/README.md).
+This directory contains an implementation of React app Jumbler written in JavaScript and run using [webpack](https://webpack.js.org), see [./jumbler-app-js/README.md](./jumbler-app-js/README.md).
 
 ## jumbler-app-ts
 
-This implementation of React App Jumbler is a [React](https://reactjs.org) demo TypeScript application, see [./jumbler-app-ts/README.md](./jumbler-app-ts/README.md).
+This directory contains an implementation of React app Jumbler written in TypeScript and run using [webpack](https://webpack.js.org), see [./jumbler-app-ts/README.md](./jumbler-app-ts/README.md).
+
+## jumbler-app-k8s
+
+This implementation of React app Jumbler represents the `jumbler-app-ts` implementation run on [Docker](https://www.docker.com) and [Kubernetes](https://kubernetes.io), see [./jumbler-app-k8s/README.md](./jumbler-app-k8s/README.md).
+
