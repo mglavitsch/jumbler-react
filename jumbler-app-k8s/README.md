@@ -1,4 +1,4 @@
-# React App (Typescript) Run on Kubernetes
+# React App (TypeScript) Run on Kubernetes
 
 This repo directory contains the config files needed to run the React app located at [../jumbler-app-ts](https://github.com/mglavitsch/jumbler-react/tree/master/jumbler-app-ts) using Docker and Kubernetes.
 
