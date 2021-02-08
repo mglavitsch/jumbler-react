@@ -1,6 +1,6 @@
 # jumbler-react
 
-Sample demo React app run on Docker and Kubernetes.
+Small React app run on Docker and Kubernetes.
 
 # Installation
 
