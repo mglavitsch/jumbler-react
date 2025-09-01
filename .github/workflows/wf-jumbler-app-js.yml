@@ -1,0 +1,29 @@
+name: Build and deploy project jumbler-app-js
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  wf-jumbler-app-js:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '24.5.0'
+
+      - name: Install dependencies
+        run: |
+          cd jumbler-app-js
+          npm install
+
+      - name: Build project
+        run: |
+          cd jumbler-app-js
+          npm start
