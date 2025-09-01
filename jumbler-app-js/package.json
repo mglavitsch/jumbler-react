@@ -4,32 +4,34 @@
   "description": "React App Jumbler (JavaScript)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode=development",
-    "dev-server": "webpack-dev-server"
+    "start": "node ./build-script.js",
+    "dev-server": "webpack serve --mode=development"
   },
   "keywords": [],
   "author": "Michael Glavitsch",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "react": "^16.14.0",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.14.0"
+    "html-webpack-plugin": "^5.6.4",
+    "license-webpack-plugin": "^4.0.2",
+    "terser-webpack-plugin": "^5.3.14",
+    "bootstrap": "^5.3.7",
+    "jquery": "^3.7.1",
+    "@popperjs/core": "^2.11.8",
+    "react": "^19.1.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-react": "^7.12.10",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.0.1",
-    "fsevents": "^2.2.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.1"
+    "@babel/core": "^7.28.3",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
   },
   "repository": {
     "type": "git",

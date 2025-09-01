@@ -23,9 +23,9 @@ export default class Playground extends Component {
       <Form>
         <Container>
           <Row>
-            <Col>
+            <Col className="right-align">
               <Form.Group controlId="resetButton">
-                <Button variant="secondary" onClick={onReset}>
+                <Button className="pg-style" variant="secondary" onClick={onReset}>
                   Reset
                 </Button>
               </Form.Group>
@@ -38,16 +38,14 @@ export default class Playground extends Component {
                   as="textarea"
                   rows="5"
                   placeholder="Write something here ..."
-                >
-                  {textInput}
-                </Form.Control>
+                  defaultValue={textInput} />
               </Form.Group>
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className="right-align">
               <Form.Group controlId="jumbleButton">
-                <Button variant="primary" onClick={onJumble}>
+                <Button className="pg-style" variant="primary" onClick={onJumble}>
                   Jumble <Badge variant="light">{counter}</Badge>
                 </Button>
               </Form.Group>
@@ -56,9 +54,11 @@ export default class Playground extends Component {
           <Row>
             <Col>
               <Form.Group controlId={textOutputId}>
-                <Form.Control as="textarea" rows="5" placeholder="Result">
-                  {textOutput}
-                </Form.Control>
+                <Form.Control
+                  as="textarea"
+                  rows="5"
+                  placeholder="Result"
+                  defaultValue={textOutput} />
               </Form.Group>
             </Col>
           </Row>

@@ -1,10 +1,8 @@
-import React, { Component, Suspense, lazy } from "react";
-import Button from "react-bootstrap/Button";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Navbar from "react-bootstrap/Navbar";
+import React, { Component } from "react";
+import { Button, Container, Navbar, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const Playground = lazy(() => import("./components/playground.jsx"));
+import Playground from "./components/playground.jsx";
+import Jumbler from "./lib/jumble.js";
 
 class App extends Component {
   textInputId;
@@ -40,21 +38,19 @@ class App extends Component {
   };
 
   handleJumble = () => {
-    import("./lib/jumble.js").then(moduleObj => {
-      let newTextInput = document.getElementById(this.textInputId).value;
-      let jumbler = new moduleObj.default(newTextInput);
-      let newTextOutput = jumbler.getJumbledText(true);
-      document.getElementById(this.textOutputId).value = newTextOutput;
-      this.setState({
-        textInput: newTextInput,
-        textOutput: newTextOutput,
-        counter:
-          newTextInput.length === 0
-            ? 0
-            : newTextInput !== this.state.textInput
-              ? 1
-              : this.state.counter + 1
-      });
+    let newTextInput = document.getElementById(this.textInputId).value;
+    let jumbler = new Jumbler(newTextInput);
+    let newTextOutput = jumbler.getJumbledText(true);
+    document.getElementById(this.textOutputId).value = newTextOutput;
+    this.setState({
+      textInput: newTextInput,
+      textOutput: newTextOutput,
+      counter:
+        newTextInput.length === 0
+          ? 0
+          : newTextInput !== this.state.textInput
+            ? 1
+            : this.state.counter + 1
     });
   };
 
@@ -72,17 +68,15 @@ class App extends Component {
   renderPlayground() {
     if (this.state.playgroundVisible) {
       return (
-        <Suspense fallback={<h2>Loading...</h2>}>
-          <Playground
-            onReset={this.handleReset}
-            onJumble={this.handleJumble}
-            textInputId={this.textInputId}
-            textInput={this.state.textInput}
-            textOutputId={this.textOutputId}
-            textOutput={this.state.textOutput}
-            counter={this.state.counter}
-          />
-        </Suspense>
+        <Playground
+          onReset={this.handleReset}
+          onJumble={this.handleJumble}
+          textInputId={this.textInputId}
+          textInput={this.state.textInput}
+          textOutputId={this.textOutputId}
+          textOutput={this.state.textOutput}
+          counter={this.state.counter}
+        />
       );
     }
   }
@@ -94,20 +88,20 @@ class App extends Component {
     return (
       <React.Fragment>
         <header>
-          <Navbar variant="dark" bg="dark" expand="xl">
+          <Navbar className="p-2" variant="dark" bg="dark" expand={false}>
             <Navbar.Brand>
               <strong>About</strong>
             </Navbar.Brand>
-            <Navbar.Toggle />
+            <Navbar.Toggle aria-controls="navbar-content" />
             <Navbar.Collapse>
-              <div className="container">
-                <div className="row">
-                  <div className="col-sm-8">
+              <Container>
+                <Row>
+                  <Col sm={8}>
                     <p className="text-white">
                       This page is powered by ReactJS, JavaScript and React-Bootstrap.
                     </p>
-                  </div>
-                  <div className="col-sm-4">
+                  </Col>
+                  <Col sm={4}>
                     <h5 className="text-white">Contact</h5>
                     <ul className="list-unstyled">
                       <li className="text-white">Michael Glavitsch</li>
@@ -120,14 +114,14 @@ class App extends Component {
                         </a>
                       </li>
                     </ul>
-                  </div>
-                </div>
-              </div>
+                  </Col>
+                </Row>
+              </Container>
             </Navbar.Collapse>
           </Navbar>
         </header>
         <main>
-          <Jumbotron style={this.jumbotronStyle}>
+          <Container style={this.jumbotronStyle}>
             <h1>Jumbler</h1>
             <p>
               It doesn't matter in what order the letters in a word are, the
@@ -135,15 +129,16 @@ class App extends Component {
               right place. The rest can be a total mess and you can still read
               it without problem. This is because the human mind does not read
               every letter by itself, but the word as a whole.
-              </p>
+            </p>
             <Button
+              className="app-style"
               variant="info"
               type="button"
               onClick={this.handleShowPlayground}
             >
               {buttonText}
             </Button>
-          </Jumbotron>
+          </Container>
           {this.renderPlayground()}
         </main>
       </React.Fragment>

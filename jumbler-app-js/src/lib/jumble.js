@@ -104,8 +104,10 @@ export default class Jumbler {
       return word;
     }
 
-    let subStr, newStr, randomIndex;
+    let subStr, newStr, randomIndex
+    let attempts = 0;
     do {
+      attempts++;
       subStr = word.substring(1, word.length - 1);
       newStr = word.substring(0, 1);
       while (subStr.length > 0) {
@@ -116,7 +118,7 @@ export default class Jumbler {
           subStr.slice(randomIndex + 1, subStr.length);
       }
       newStr = newStr + word.substring(word.length - 1, word.length);
-    } while (force && newStr === word);
+    } while (force && attempts < 1000 && newStr === word);
 
     return newStr;
   }

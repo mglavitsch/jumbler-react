@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,31 +19,36 @@ code {
 .container {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
 }
 
-.jumbotron {
+.container {
   font-family: "Helvetica";
-  margin: 20px;
+  margin: 1.25rem;
 }
 
-.jumbotron h1 {
-  font-size: 32px;
+.container h1 {
+  font-size: 2rem;
 }
 
-.jumbotron p {
-  font-size: 18px;
-  line-height: 1.2em;
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
 }
 
-.form-group textarea {
-  width: 100%;
-  font-family: "Helvetica";
-  font-size: 16px;
-  line-height: 16px;
-  padding: 8px;
+.app-style {
+  font-size: 1.2rem !important;
 }
 
-.form-group button {
-  font-family: "Helvetica";
-  font-size: 16px;
+.pg-style {
+  font-size: 1.1rem !important;
+}
+
+.form-control {
+  font-size: 1rem !important;
+}
+
+.right-align {
+  display: flex;
+  justify-content: flex-end;
 }
