@@ -32,38 +32,21 @@ jobs:
           cd jumbler-app-js
           npm run build
 
-      - name: Assume AWS Role via OIDC
-        id: assume-role
-        run: |
-          ROLE_ARN="arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.AWS_ROLE_NAME }}"
+      - name: Show GitHub Run ID
+        run: echo "Run ID: ${{ github.run_id }}"
 
-          # Request OIDC-Token from GitHub
-          OIDC_TOKEN=$(curl -sSL \
-            -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" \
-            | jq -r '.value')
-
-          # Assume AWS role via OIDC
-          CREDS_JSON=$(aws sts assume-role-with-web-identity \
-            --role-arn "$ROLE_ARN" \
-            --role-session-name github-actions \
-            --web-identity-token "$OIDC_TOKEN" \
-            --duration-seconds 900)
-
-          echo "$CREDS_JSON" > creds.json
-
-          export AWS_ACCESS_KEY_ID=$(jq -r '.Credentials.AccessKeyId' creds.json)
-          export AWS_SECRET_ACCESS_KEY=$(jq -r '.Credentials.SecretAccessKey' creds.json)
-          export AWS_SESSION_TOKEN=$(jq -r '.Credentials.SessionToken' creds.json)
-
-          echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $GITHUB_ENV
-          echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $GITHUB_ENV
-          echo "AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN" >> $GITHUB_ENV
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4.3.1
+        with:
+          role-to-assume: "arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.AWS_ROLE_NAME }}"
+          role-session-name: "GitHubActions-${{ github.run_id }}"
+          role-duration-seconds: 900
+          aws-region: eu-central-2
 
       - name: Deploy to S3
         run: |
-          aws s3 rm s3://${{ secrets.AWS_BUCKET_NAME }}/ --recursive
+          aws s3 rm s3://${{ secrets.AWS_BUCKET_NAME }}/ --recursive --region eu-central-2
           cd jumbler-app-js/dist
-          aws s3 cp bundle.*.js s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable"
-          aws s3 cp THIRD-PARTY-LICENSES.*.txt s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable"
-          aws s3 cp index.html s3://${{ secrets.AWS_BUCKET_NAME }}/index.html --cache-control "max-age=0, no-cache, no-store, must-revalidate"
+          aws s3 cp bundle.*.js s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable" --region eu-central-2
+          aws s3 cp THIRD-PARTY-LICENSES.*.txt s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable" --region eu-central-2
+          aws s3 cp index.html s3://${{ secrets.AWS_BUCKET_NAME }}/index.html --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
