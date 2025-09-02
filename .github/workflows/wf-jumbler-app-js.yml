@@ -32,6 +32,12 @@ jobs:
           cd jumbler-app-js
           npm run build
 
+      - name: Debug dist contents
+        run: |
+          cd jumbler-app-js/dist
+          pwd
+          ls -l
+
       - name: Show GitHub Run ID
         run: |
           echo "Run ID: ${{ github.run_id }}"
