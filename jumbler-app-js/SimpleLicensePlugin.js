@@ -22,7 +22,6 @@ class SimpleLicensePlugin {
           const licenseText =
             "<placeholder for license text content of dependencies installed in node_modules>\n"
             + "Generated on: " + timeStamp + "\n";
-          const hash = crypto.createHash("md5").update(licenseText).digest("hex").slice(0, 8);
 
           // Asset hinzufügen
           compilation.emitAsset(this.outputFilename, new sources.RawSource(licenseText));

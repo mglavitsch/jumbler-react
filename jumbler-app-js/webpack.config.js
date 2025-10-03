@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const packageJson = require("./package.json");
 const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin;
@@ -54,12 +55,17 @@ module.exports = (env, argv) => {
         minify: false,
         templateParameters: (compilation) => {
           const bundleFile = Object.keys(compilation.assets).find(f => f.includes("bundle"));
-          const licenseFile = Object.keys(compilation.assets).find(f => f.includes("THIRD-PARTY-LICENSES"));
+          const licenseFile = Object.keys(compilation.assets).find(f => f.includes("THIRD-PARTY-LICENSES.dev"));
           return {
             bundleHref: bundleFile,
             licenseHref: licenseFile,
           };
         },
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.join(srcDir, "favicon.ico"), to: distDir }
+        ],
       }),
     ],
     devServer: {

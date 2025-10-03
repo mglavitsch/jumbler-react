@@ -48,7 +48,9 @@ jobs:
         run: |
           aws s3 rm s3://${{ secrets.AWS_BUCKET_NAME }}/ --recursive --region eu-central-2
           cd jumbler-app-js/dist
-          HASHED_LICENSE_FILE=$(ls | grep -E '^THIRD-PARTY-LICENSES\.[a-f0-9]{8}\.txt$')
+          HASHED_LICENSE_FILE=$(ls | grep -E '^THIRD-PARTY-LICENSES\.[a-f0-9]{16}\.txt$')
+          HASHED_FAVICON_FILE=$(ls | grep -E '^favicon\.[a-f0-9]{16}\.ico$')
           aws s3 cp "$HASHED_LICENSE_FILE" s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable" --region eu-central-2
+          aws s3 cp "$HASHED_FAVICON_FILE" s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable" --region eu-central-2
           aws s3 cp bundle.*.js s3://${{ secrets.AWS_BUCKET_NAME }}/ --cache-control "max-age=31536000, immutable" --region eu-central-2
           aws s3 cp index.html s3://${{ secrets.AWS_BUCKET_NAME }}/index.html --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
