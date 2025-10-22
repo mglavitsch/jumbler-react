@@ -65,5 +65,5 @@ jobs:
           aws s3 cp bundle.*.js s3://${{ secrets.AWS_BUCKET_NAME }}/ --content-type "application/javascript" --cache-control "max-age=31536000, immutable" --region eu-central-2
           aws s3 cp index.html s3://${{ secrets.AWS_BUCKET_NAME }}/index.html --content-type "text/html" --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
           aws s3 cp wrapper.html s3://${{ secrets.AWS_BUCKET_NAME }}/wrapper.html --content-type "text/html" --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
-          aws s3 cp asset-manifest.json s3://${{ secrets.AWS_BUCKET_NAME }}/wrapper.html --content-type "application/json" --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
+          aws s3 cp asset-manifest.json s3://${{ secrets.AWS_BUCKET_NAME }}/asset-manifest.json --content-type "application/json" --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
           aws s3 cp initial-text.txt s3://${{ secrets.AWS_BUCKET_NAME }}/initial-text.txt --content-type "text/plain" --cache-control "max-age=0, no-cache, no-store, must-revalidate" --region eu-central-2
