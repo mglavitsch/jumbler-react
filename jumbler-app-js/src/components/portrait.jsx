@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from "./portrait.module.css";
-console.log("Styles object:", styles);
 
 export default function Portrait({ alt }) {
     const [portraitFilename, setPortraitFilename] = useState(null);

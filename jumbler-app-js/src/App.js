@@ -5,7 +5,6 @@ import Playground from "./components/playground.jsx";
 import Portrait from "./components/portrait.jsx";
 import Jumbler from "./lib/jumble.js";
 import styles from "./App.module.css";
-console.log("Styles object: ", styles);
 
 class App extends Component {
   textInputRef = React.createRef();
