@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 body {
@@ -14,41 +14,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.container {
-  font-family: "Helvetica";
-  margin: 1.25rem;
-}
-
-.container h1 {
-  font-size: 2rem;
-}
-
-.container p {
-  font-size: 1.1rem;
-  line-height: 1.2rem;
-}
-
-.app-style {
-  font-size: 1.2rem !important;
-}
-
-.pg-style {
-  font-size: 1.1rem !important;
-}
-
-.form-control {
-  font-size: 1rem !important;
-}
-
-.right-align {
-  display: flex;
-  justify-content: flex-end;
 }

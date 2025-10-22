@@ -1,0 +1,55 @@
+.dtclink {
+    color: #e20074;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.links {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.links:hover {
+    color: #0dcaf0;
+}
+
+.nb-container {
+    font-family: "Helvetica";
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 50rem;
+    position: sticky;
+    top: 0;
+    padding: 0.8rem;
+}
+
+.nb-container p {
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.jt-container {
+    font-family: "Helvetica";
+    background-color: #e9ecf0;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1.25rem;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.jt-container p {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+.button-style {
+    font-size: 1.2rem;
+}

@@ -1,0 +1,1 @@
+On the application layer, this page is built using ReactJS, JavaScript, React-Bootstrap, and webpack. The underlying infrastructure is hosted on the AWS Cloud. See the link below for a diagram illustrating the AWS architecture supporting this page. The CI/CD pipeline is implemented by a GitHub workflow.

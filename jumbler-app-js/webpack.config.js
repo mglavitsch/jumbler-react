@@ -35,7 +35,21 @@ module.exports = (env, argv) => {
           },
         },
         {
+          test: /\.module\.css$/i,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                modules: {
+                  namedExport: false
+                },
+              }
+            }],
+        },
+        {
           test: /\.css$/i,
+          exclude: /\.module\.css$/i,
           use: ["style-loader", "css-loader"],
         },
       ],
@@ -64,7 +78,12 @@ module.exports = (env, argv) => {
       }),
       new CopyWebpackPlugin({
         patterns: [
-          { from: path.join(srcDir, "favicon.ico"), to: distDir }
+          { from: path.join(srcDir, "favicon.ico"), to: distDir },
+          { from: path.join(srcDir, "portrait-mg.png"), to: distDir },
+          { from: path.join(srcDir, "asset-manifest.json"), to: distDir },
+          { from: path.join(srcDir, "wrapper.html"), to: distDir },
+          { from: path.join(srcDir, "AWS-services.svg"), to: distDir },
+          { from: path.join(srcDir, "initial-text.txt"), to: distDir },
         ],
       }),
     ],
