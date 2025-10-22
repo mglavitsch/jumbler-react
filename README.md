@@ -21,6 +21,8 @@ There are three directories containing two different implementations of [React](
 
 This directory contains an implementation of React app Jumbler written in JavaScript and run using [webpack](https://webpack.js.org), see [./jumbler-app-js/README.md](./jumbler-app-js/README.md).
 
+Additionally, it is hosted in the AWS cloud and available at [https://to-be-deployed-soon.ch](to-be-deployed-soon.ch).
+
 ## jumbler-app-ts
 
 This directory contains an implementation of React app Jumbler written in TypeScript and run using [webpack](https://webpack.js.org), see [./jumbler-app-ts/README.md](./jumbler-app-ts/README.md).
