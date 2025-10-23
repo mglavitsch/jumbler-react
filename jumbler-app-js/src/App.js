@@ -28,7 +28,6 @@ class App extends Component {
       this.setState({
         textInput: data,
       });
-      console.log(data);
     } catch (error) {
       console.error("Error fetching text file from source:", error);
       this.setState({ textInput: "Error fetching text file from source" });
