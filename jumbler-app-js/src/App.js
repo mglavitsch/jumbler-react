@@ -21,7 +21,7 @@ class App extends Component {
   async componentDidMount() {
     // One-off loading of text from text file when component did mount
     try {
-      const response = await fetch("/dist/initial-text.txt");
+      const response = await fetch("initial-text.txt");
       if (!response.ok) throw new Error("HTTP response not OK");
       const data = await response.text();
       this.defaultTextInput = data;
