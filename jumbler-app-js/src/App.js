@@ -119,7 +119,7 @@ class App extends Component {
               <Container className={styles.nbContainer}>
                 <Row>
                   <Col sm={9}>
-                    <p lang="en" className="text-white">I’m Michael Glavitsch, a passionate engineer with over 30 years of project experience in the ICT industry, from software engineering to IT management.
+                    <p lang="en" className="text-white">I’m Michael Glavitsch, a passionate engineer and consultant with over 30 years of project experience in the ICT industry, from software engineering to IT management.
                     </p>
                     <p lang="en" className="text-white">I’m still fascinated by how technology can open doors and create new opportunities.</p>
                     <p lang="en" className="text-white">Since 2020, I’ve been working at <a href="https://ch.detecon.com" className={styles.dtclink} target="_blank" rel="noopener noreferrer">Detecon (Schweiz) AG</a> as an Enterprise and IT Solution Architect, contributing to cloud and API-driven architectures. In 2022, I had the privilege of being the lead author of the <a href="https://www.bk.admin.ch/bk/en/home/digitale-transformation-ikt-lenkung/bundesarchitektur/api-architektur-bund.html" className={styles.links} target="_blank" rel="noopener noreferrer">API Architecture Bund</a>.</p>
