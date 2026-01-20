@@ -127,6 +127,7 @@ class App extends Component {
                     <p lang="en" className="text-white">Feel free to reach out and connect with me on <a href="https://www.linkedin.com/in/michael-glavitsch/" className={styles.links} target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
                     <Portrait alt="Michael Glavitsch" />
                     <ul className="list-unstyled" style={{ marginTop: "0rem" }}>
+                      <li className="text-white"><a href="https://www.credly.com/badges/5332f86b-37db-4dfe-916b-e8345bdbef97/linked_in_profile" className={styles.links} target="_blank" rel="noopener noreferrer">Certified SAFe 6 Architect</a></li>
                       <li className="text-white"><a href="https://www.credly.com/badges/a8dbaff0-34ac-4653-8768-5b163dc96b16/public_url" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Professional</a></li>
                       <li className="text-white"><a href="https://www.credly.com/badges/0dc4a567-77c8-45f8-b5ce-12101749c652/public_url" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></li>
                       <li className="text-white"><a href="https://www.credly.com/badges/4002abc8-5321-4e4d-87ec-50a9d05ec871/linked_in_profile" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></li>
