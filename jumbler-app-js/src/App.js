@@ -127,11 +127,12 @@ class App extends Component {
                     <p lang="en" className="text-white">Feel free to reach out and connect with me on <a href="https://www.linkedin.com/in/michael-glavitsch/" className={styles.links} target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
                     <Portrait alt="Michael Glavitsch" />
                     <ul className="list-unstyled" style={{ marginTop: "0rem" }}>
-                      <li className="text-white"><a href="https://www.credly.com/badges/5332f86b-37db-4dfe-916b-e8345bdbef97/linked_in_profile" className={styles.links} target="_blank" rel="noopener noreferrer">Certified SAFe&reg; 6 Architect</a></li>
-                      <li className="text-white"><a href="https://www.credly.com/badges/a8dbaff0-34ac-4653-8768-5b163dc96b16/public_url" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Professional</a></li>
-                      <li className="text-white"><a href="https://www.credly.com/badges/0dc4a567-77c8-45f8-b5ce-12101749c652/public_url" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></li>
-                      <li className="text-white"><a href="https://www.credly.com/badges/4002abc8-5321-4e4d-87ec-50a9d05ec871/linked_in_profile" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></li>
-                      <li className="text-white"><a href="https://www.credly.com/badges/8da16d7f-6630-446e-a3a9-700e9738582b/linked_in_profile" className={styles.links} target="_blank" rel="noopener noreferrer">The Open Group Certified: TOGAF&reg; 9 Certified</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/5332f86b-37db-4dfe-916b-e8345bdbef97" className={styles.links} target="_blank" rel="noopener noreferrer">Certified SAFe&reg; 6 Architect</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/d5a92ddd-7f91-455c-ac58-75683f89c1ff" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified AI Practitioner</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/a8dbaff0-34ac-4653-8768-5b163dc96b16" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Professional</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/0dc4a567-77c8-45f8-b5ce-12101749c652" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect - Associate</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/4002abc8-5321-4e4d-87ec-50a9d05ec871" className={styles.links} target="_blank" rel="noopener noreferrer">AWS Certified Cloud Practitioner</a></li>
+                      <li className="text-white"><a href="https://www.credly.com/badges/8da16d7f-6630-446e-a3a9-700e9738582b" className={styles.links} target="_blank" rel="noopener noreferrer">The Open Group Certified: TOGAF&reg; 9 Certified</a></li>
                     </ul>
                     <p className="text-white">
                       The code can be inspected on <a href="https://github.com/mglavitsch/jumbler-react/tree/master/jumbler-app-js" className={styles.links} target="_blank" rel="noopener noreferrer">GitHub</a>.

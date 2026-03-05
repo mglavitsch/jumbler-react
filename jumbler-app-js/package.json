@@ -11,16 +11,16 @@
   "author": "Michael Glavitsch",
   "license": "MIT",
   "dependencies": {
-    "html-webpack-plugin": "^5.6.4",
-    "license-webpack-plugin": "^4.0.2",
-    "copy-webpack-plugin": "^13.0.1",
-    "terser-webpack-plugin": "^5.3.14",
-    "bootstrap": "^5.3.7",
-    "jquery": "^3.7.1",
     "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.7",
+    "copy-webpack-plugin": "^14.0.0",
+    "html-webpack-plugin": "^5.6.4",
+    "jquery": "^3.7.1",
+    "license-webpack-plugin": "^4.0.2",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "terser-webpack-plugin": "^5.3.14"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
